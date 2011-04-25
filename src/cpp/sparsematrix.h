@@ -490,7 +490,7 @@ public:
 	}
 
 	size_t count(const rowkey_t & row, const colkey_t & col) const {
-		mat_iter it = mat.find(row);
+		mat_const_iter it = mat.find(row);
 		if(it == mat.end()) {
 			return 0;
 		}
