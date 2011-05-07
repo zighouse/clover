@@ -432,14 +432,14 @@ public:
 
 	size_t size() const {
 		size_t s = 0;
-		for(mat_iter it=mat.begin(); it!=mat.end(); ++it) {
+		for(mat_const_iter it=mat.begin(); it!=mat.end(); ++it) {
 			s += it->second.size();
 		}
 		return s;
 	}
 
 	rowkey_t row_lower() const {
-		typename mat_t::const_iterator it = mat.begin();
+		mat_const_iter it = mat.begin();
 		if(it != mat.end())
 			return it->first;
 		return 0;
