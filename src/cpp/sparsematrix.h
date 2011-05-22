@@ -164,7 +164,7 @@ public:
 		if(it.row == it.mat_end)
 			return row == mat_end;
 		else
-			return cell == it.cell && row == it.row;
+			return row == it.row && cell == it.cell;
 	}
 
 	bool operator != (const SparseMatrixIterator & it) const
@@ -348,7 +348,7 @@ public:
 		if(it.row == it.mat_end)
 			return row == mat_end;
 		else
-			return cell == it.cell && row == it.row;
+			return row == it.row && cell == it.cell;
 	}
 
 	bool operator == (const iterator_t & it) const
@@ -356,7 +356,7 @@ public:
 		if(it.row == it.mat_end)
 			return row == mat_end;
 		else
-			return cell == it.cell && row == it.row;
+			return row == it.row && cell == it.cell;
 	}
 
 	bool operator != (const SparseMatrixConstIterator & it) const
